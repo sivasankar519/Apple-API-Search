@@ -10,4 +10,5 @@
 
 @interface DataTableViewController : UITableViewController
 
+@property (nonatomic, strong) NSString *searchString;
 @end

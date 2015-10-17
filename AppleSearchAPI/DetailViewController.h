@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  DetailViewController.h
 //  AppleSearchAPI
 //
 //  Created by SIVASANKAR DEVABATHINI on 10/17/15.
@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController<UITableViewDataSource,UITableViewDelegate,UISearchBarDelegate>
+@interface DetailViewController : UIViewController
+
+@property (nonatomic,strong) NSDictionary* detailInfo;
 
 @end

@@ -9,6 +9,7 @@
 #import "DataTableViewController.h"
 #import "DataManager.h"
 #import "DataTableViewCell.h"
+#import "DetailViewController.h"
 @interface DataTableViewController ()
 
 @end
@@ -20,7 +21,7 @@
     [self callService];
     
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+     self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -33,9 +34,8 @@
 
 #pragma mark - Custom UI section
 -(void)callService{
-    NSString *urlString = @"https://itunes.apple.com/search?term=Image+Montage&limit=20";
-    
-    [super viewDidLoad];
+    NSString *urlString = [NSString stringWithFormat:
+                           @"https://itunes.apple.com/search?term=%@&limit=20",self.searchString];
     
     self.view.backgroundColor = [UIColor whiteColor];
     
@@ -52,22 +52,38 @@
     }];
 }
 
+ #pragma mark - Navigation
+ 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    if ([[segue identifier] isEqualToString:@"ShowDetail"]) {
+        
+        // Get destination view
+        DetailViewController *destinationController = [segue destinationViewController];
+        NSInteger row = [self.tableView indexPathForSelectedRow].row;
+        destinationController.detailInfo = [DataManager sharedInstance].dataArray[row];
+        NSLog(@"detail info");
+    }
+}
+ 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+
     // Return the number of sections.
     return  1;
+    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
+
     // Return the number of rows in the section.
     return [[DataManager sharedInstance].dataArray count];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     DataTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
    
     cell.textLabel.text = [DataManager sharedInstance].dataArray[indexPath.row][@"trackCensoredName"];
@@ -75,8 +91,6 @@
     cell.imageURLString = [[DataManager sharedInstance] getImageURLStringForCell:indexPath.item];
    
     [cell setUpTableCell];
-    
-    // Configure the cell...
     
     return cell;
 }
@@ -116,14 +130,6 @@
 }
 */
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

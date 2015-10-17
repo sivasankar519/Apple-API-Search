@@ -10,6 +10,7 @@
 		EFE230611BD2A2EB002961DF /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = EFE230601BD2A2EB002961DF /* 1.png */; };
 		EFE230641BD2A938002961DF /* DataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE230631BD2A938002961DF /* DataTableViewCell.m */; };
 		EFE230671BD2B529002961DF /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE230661BD2B529002961DF /* FirstViewController.m */; };
+		EFE2306A1BD2CA23002961DF /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE230691BD2CA23002961DF /* DetailViewController.m */; };
 		EFF40ACE1BD17CCA0010B666 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF40ACD1BD17CCA0010B666 /* main.m */; };
 		EFF40AD11BD17CCA0010B666 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF40AD01BD17CCA0010B666 /* AppDelegate.m */; };
 		EFF40AD41BD17CCA0010B666 /* AppleSearchAPI.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = EFF40AD21BD17CCA0010B666 /* AppleSearchAPI.xcdatamodeld */; };
@@ -37,6 +38,8 @@
 		EFE230631BD2A938002961DF /* DataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewCell.m; sourceTree = "<group>"; };
 		EFE230651BD2B529002961DF /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		EFE230661BD2B529002961DF /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
+		EFE230681BD2CA23002961DF /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		EFE230691BD2CA23002961DF /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		EFF40AC81BD17CCA0010B666 /* AppleSearchAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppleSearchAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFF40ACC1BD17CCA0010B666 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFF40ACD1BD17CCA0010B666 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -100,6 +103,8 @@
 				EFE230661BD2B529002961DF /* FirstViewController.m */,
 				EFF40AF71BD1812F0010B666 /* DataTableViewController.h */,
 				EFF40AF81BD1812F0010B666 /* DataTableViewController.m */,
+				EFE230681BD2CA23002961DF /* DetailViewController.h */,
+				EFE230691BD2CA23002961DF /* DetailViewController.m */,
 				EFE230621BD2A938002961DF /* DataTableViewCell.h */,
 				EFE230631BD2A938002961DF /* DataTableViewCell.m */,
 				EFF40AF41BD17E910010B666 /* DataManager.h */,
@@ -244,6 +249,7 @@
 				EFF40AD41BD17CCA0010B666 /* AppleSearchAPI.xcdatamodeld in Sources */,
 				EFF40AF91BD1812F0010B666 /* DataTableViewController.m in Sources */,
 				EFE230671BD2B529002961DF /* FirstViewController.m in Sources */,
+				EFE2306A1BD2CA23002961DF /* DetailViewController.m in Sources */,
 				EFF40AF61BD17E910010B666 /* DataManager.m in Sources */,
 				EFE230641BD2A938002961DF /* DataTableViewCell.m in Sources */,
 				EFF40AD11BD17CCA0010B666 /* AppDelegate.m in Sources */,
