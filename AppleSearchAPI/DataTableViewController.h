@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DataTableViewController.h
 //  AppleSearchAPI
 //
 //  Created by SIVASANKAR DEVABATHINI on 10/16/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DataTableViewController : UITableViewController
 
 @end
-
