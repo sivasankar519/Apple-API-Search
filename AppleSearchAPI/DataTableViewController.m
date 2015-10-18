@@ -21,7 +21,7 @@
     [self callService];
     
     // Uncomment the following line to preserve selection between presentations.
-     self.clearsSelectionOnViewWillAppear = NO;
+     self.clearsSelectionOnViewWillAppear = YES;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
@@ -32,6 +32,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    self.title = self.searchString;
+}
 #pragma mark - Custom UI section
 -(void)callService{
     NSString *urlString = [NSString stringWithFormat:
@@ -62,7 +66,11 @@
         DetailViewController *destinationController = [segue destinationViewController];
         NSInteger row = [self.tableView indexPathForSelectedRow].row;
         destinationController.detailInfo = [DataManager sharedInstance].dataArray[row];
-        NSLog(@"detail info");
+        
+        DataTableViewCell *cell = (DataTableViewCell*)[self.tableView cellForRowAtIndexPath:[self.tableView indexPathForSelectedRow]];
+        destinationController.image = cell.imageView.image;
+        
+       
     }
 }
  

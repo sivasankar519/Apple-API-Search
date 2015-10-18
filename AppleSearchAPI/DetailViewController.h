@@ -11,5 +11,5 @@
 @interface DetailViewController : UIViewController
 
 @property (nonatomic,strong) NSDictionary* detailInfo;
-
+@property (nonatomic, strong) UIImage *image;
 @end

@@ -30,12 +30,15 @@
     self.priceLabel.text = [self setTrackPrice:self.detailInfo[@"trackPrice"]];
     self.dateLabel.text = [self setDate:self.detailInfo[@"releaseDate"]];
     self.timeLabel.text = [self setTrackTime:[self.detailInfo[@"trackTimeMillis"] integerValue]];
-    
+    self.imageView.image = self.image;
     //trackTimeMillis
     self.genreLabel.text = self.detailInfo[@"kind"];
     // Do any additional setup after loading the view.
 }
-
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:YES];
+    self.title = self.detailInfo[@"trackCensoredName"];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
