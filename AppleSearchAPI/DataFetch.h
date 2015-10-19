@@ -12,8 +12,9 @@
 
 @property(nonatomic, strong) NSString* searchKey;
 + (DataFetch *)sharedInstance;
+
 - (NSArray*)fetchSearchList;
 - (NSArray*)getResultsWithSearchKey:(NSString*)searchString;
-- (void)save;
+
 -(void)saveData:(NSArray*)results;
 @end
