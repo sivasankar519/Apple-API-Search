@@ -8,7 +8,11 @@
 
 #import "FirstViewController.h"
 #import "DataTableViewController.h"
-@interface FirstViewController ()
+#import "DataFetch.h"
+#import "SearchItem.h"
+@interface FirstViewController (){
+    NSArray *fetchArray;
+}
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
@@ -17,6 +21,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
    
     // Do any additional setup after loading the view.
 }
@@ -27,7 +32,9 @@
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
+    fetchArray = [[DataFetch sharedInstance] fetchSearchList];
     [self.tableView deselectRowAtIndexPath:[self.tableView indexPathForSelectedRow] animated:NO];
+    [self.tableView reloadData];
 }
 
 #pragma mark - Navigation
@@ -44,7 +51,8 @@
     }
 }
 
-#pragma matk - Search Bar Methods
+#pragma mark - Search Bar Methods
+
 - (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
     [self performSegueWithIdentifier:@"DataTable" sender:searchBar];
 }
@@ -60,7 +68,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
     // Return the number of rows in the section.
-    return 30;
+    return fetchArray.count;
 }
 
 
@@ -68,10 +76,10 @@
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     
-    cell.textLabel.text = @"Selena+gomez";
-    
+    cell.textLabel.text = [fetchArray[indexPath.row] searchItem];
     cell.textLabel.textAlignment = NSTextAlignmentCenter;
     cell.textLabel.textColor = [UIColor blueColor];
+   
     
     // Configure the cell...
     

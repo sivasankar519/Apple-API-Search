@@ -16,7 +16,9 @@
 - (void)loadURLRequestWithURLString:(NSString *)urlString completionHandler:(void (^)(NSData *data))completionHandler;
 
 
-- (NSString *)getImageURLStringForCell:(NSInteger)index;
+- (NSString *)getImageURL:(NSInteger)index;
+
+
 
 
 @end

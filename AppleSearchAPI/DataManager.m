@@ -45,7 +45,7 @@ typedef void (^completionHandler)(NSData *data);
 }
 
 
-- (NSString *)getImageURLStringForCell:(NSInteger)index {
+- (NSString *)getImageURL:(NSInteger)index {
     NSDictionary *dict = [self.dataArray objectAtIndex:index];
     
     if(dict[@"artworkUrl100"]) return dict[@"artworkUrl100"];

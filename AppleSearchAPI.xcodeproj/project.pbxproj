@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF5F49651BD48DF300DEEB2B /* DetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F49641BD48DF300DEEB2B /* DetailInfo.m */; };
+		EF5F49661BD48DF300DEEB2B /* DetailInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F49641BD48DF300DEEB2B /* DetailInfo.m */; };
+		EF5F49691BD48DF300DEEB2B /* SearchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F49681BD48DF300DEEB2B /* SearchItem.m */; };
+		EF5F496A1BD48DF300DEEB2B /* SearchItem.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F49681BD48DF300DEEB2B /* SearchItem.m */; };
+		EF5F496D1BD48F3D00DEEB2B /* DataFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F496C1BD48F3D00DEEB2B /* DataFetch.m */; };
+		EF5F496E1BD48F3D00DEEB2B /* DataFetch.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F496C1BD48F3D00DEEB2B /* DataFetch.m */; };
+		EF5F49711BD4CDA700DEEB2B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F49701BD4CDA700DEEB2B /* Reachability.m */; };
+		EF5F49721BD4CDA700DEEB2B /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = EF5F49701BD4CDA700DEEB2B /* Reachability.m */; };
+		EF5F49741BD4CDC400DEEB2B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EF5F49731BD4CDC400DEEB2B /* SystemConfiguration.framework */; };
 		EFE230611BD2A2EB002961DF /* 1.png in Resources */ = {isa = PBXBuildFile; fileRef = EFE230601BD2A2EB002961DF /* 1.png */; };
 		EFE230641BD2A938002961DF /* DataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE230631BD2A938002961DF /* DataTableViewCell.m */; };
 		EFE230671BD2B529002961DF /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFE230661BD2B529002961DF /* FirstViewController.m */; };
@@ -33,6 +42,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EF5F49631BD48DF300DEEB2B /* DetailInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DetailInfo.h; path = ../DetailInfo.h; sourceTree = "<group>"; };
+		EF5F49641BD48DF300DEEB2B /* DetailInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DetailInfo.m; path = ../DetailInfo.m; sourceTree = "<group>"; };
+		EF5F49671BD48DF300DEEB2B /* SearchItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchItem.h; path = ../SearchItem.h; sourceTree = "<group>"; };
+		EF5F49681BD48DF300DEEB2B /* SearchItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchItem.m; path = ../SearchItem.m; sourceTree = "<group>"; };
+		EF5F496B1BD48F3D00DEEB2B /* DataFetch.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataFetch.h; sourceTree = "<group>"; };
+		EF5F496C1BD48F3D00DEEB2B /* DataFetch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataFetch.m; sourceTree = "<group>"; };
+		EF5F496F1BD4CDA700DEEB2B /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Reachability.h; path = ../Reachability.h; sourceTree = "<group>"; };
+		EF5F49701BD4CDA700DEEB2B /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Reachability.m; path = ../Reachability.m; sourceTree = "<group>"; };
+		EF5F49731BD4CDC400DEEB2B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		EFE230601BD2A2EB002961DF /* 1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 1.png; sourceTree = "<group>"; };
 		EFE230621BD2A938002961DF /* DataTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataTableViewCell.h; sourceTree = "<group>"; };
 		EFE230631BD2A938002961DF /* DataTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataTableViewCell.m; sourceTree = "<group>"; };
@@ -63,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5F49741BD4CDC400DEEB2B /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,10 +128,18 @@
 				EFE230631BD2A938002961DF /* DataTableViewCell.m */,
 				EFF40AF41BD17E910010B666 /* DataManager.h */,
 				EFF40AF51BD17E910010B666 /* DataManager.m */,
+				EF5F496B1BD48F3D00DEEB2B /* DataFetch.h */,
+				EF5F496C1BD48F3D00DEEB2B /* DataFetch.m */,
 				EFF40AD81BD17CCA0010B666 /* Main.storyboard */,
 				EFF40ADB1BD17CCA0010B666 /* Images.xcassets */,
 				EFF40ADD1BD17CCA0010B666 /* LaunchScreen.xib */,
 				EFF40AD21BD17CCA0010B666 /* AppleSearchAPI.xcdatamodeld */,
+				EF5F49671BD48DF300DEEB2B /* SearchItem.h */,
+				EF5F49681BD48DF300DEEB2B /* SearchItem.m */,
+				EF5F49631BD48DF300DEEB2B /* DetailInfo.h */,
+				EF5F49641BD48DF300DEEB2B /* DetailInfo.m */,
+				EF5F496F1BD4CDA700DEEB2B /* Reachability.h */,
+				EF5F49701BD4CDA700DEEB2B /* Reachability.m */,
 				EFE230601BD2A2EB002961DF /* 1.png */,
 				EFF40ACB1BD17CCA0010B666 /* Supporting Files */,
 			);
@@ -122,6 +149,7 @@
 		EFF40ACB1BD17CCA0010B666 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF5F49731BD4CDC400DEEB2B /* SystemConfiguration.framework */,
 				EFF40ACC1BD17CCA0010B666 /* Info.plist */,
 				EFF40ACD1BD17CCA0010B666 /* main.m */,
 			);
@@ -248,11 +276,15 @@
 			files = (
 				EFF40AD41BD17CCA0010B666 /* AppleSearchAPI.xcdatamodeld in Sources */,
 				EFF40AF91BD1812F0010B666 /* DataTableViewController.m in Sources */,
+				EF5F496D1BD48F3D00DEEB2B /* DataFetch.m in Sources */,
 				EFE230671BD2B529002961DF /* FirstViewController.m in Sources */,
 				EFE2306A1BD2CA23002961DF /* DetailViewController.m in Sources */,
 				EFF40AF61BD17E910010B666 /* DataManager.m in Sources */,
+				EF5F49651BD48DF300DEEB2B /* DetailInfo.m in Sources */,
 				EFE230641BD2A938002961DF /* DataTableViewCell.m in Sources */,
 				EFF40AD11BD17CCA0010B666 /* AppDelegate.m in Sources */,
+				EF5F49691BD48DF300DEEB2B /* SearchItem.m in Sources */,
+				EF5F49711BD4CDA700DEEB2B /* Reachability.m in Sources */,
 				EFF40ACE1BD17CCA0010B666 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -261,7 +293,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF5F49661BD48DF300DEEB2B /* DetailInfo.m in Sources */,
+				EF5F496A1BD48DF300DEEB2B /* SearchItem.m in Sources */,
+				EF5F496E1BD48F3D00DEEB2B /* DataFetch.m in Sources */,
 				EFF40AEB1BD17CCA0010B666 /* AppleSearchAPITests.m in Sources */,
+				EF5F49721BD4CDA700DEEB2B /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -25,19 +25,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.collectionName.text = self.detailInfo[@"collectionCensoredName"];
-    self.artistName.text = self.detailInfo[@"artistName"];
-    self.priceLabel.text = [self setTrackPrice:self.detailInfo[@"trackPrice"]];
-    self.dateLabel.text = [self setDate:self.detailInfo[@"releaseDate"]];
-    self.timeLabel.text = [self setTrackTime:[self.detailInfo[@"trackTimeMillis"] integerValue]];
+    self.collectionName.text = [self.detailInfo valueForKey:@"collectionName"];
+    self.artistName.text = [self.detailInfo valueForKey:@"artistName"];
+    self.priceLabel.text = [self setTrackPrice:[[self.detailInfo valueForKey:@"trackPrice"] floatValue]];
+    self.dateLabel.text = [self setDate:[self.detailInfo valueForKey:@"releaseDate"]];
+    self.timeLabel.text = [self setTrackTime:[[self.detailInfo valueForKey:@"trackTimeMillis"] integerValue]];
     self.imageView.image = self.image;
     //trackTimeMillis
-    self.genreLabel.text = self.detailInfo[@"kind"];
+    self.genreLabel.text = [self.detailInfo valueForKey:@"kind"];
     // Do any additional setup after loading the view.
 }
 -(void)viewWillAppear:(BOOL)animated{
     [super viewWillAppear:YES];
-    self.title = self.detailInfo[@"trackCensoredName"];
+    self.title = [self.detailInfo valueForKey:@"trackName"];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -54,11 +54,11 @@
     return [dateFormatter stringFromDate:date];
    
 }
--(NSString*)setTrackPrice:(NSNumber*)value{
+-(NSString*)setTrackPrice:(float)value{
     if(value<0){
         return @"Album Only";
     }
-    return [NSString stringWithFormat:@"$%@",value];
+    return [NSString stringWithFormat:@"$%0.2f",value];
     
 }
 -(NSString*)setTrackTime:(NSInteger)trackTime{
@@ -80,6 +80,6 @@
 */
 
 - (IBAction)viewiniTunesActn:(id)sender {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self.detailInfo[@"trackViewUrl"]]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[self.detailInfo valueForKey:@"trackViewUrl"]]];
 }
 @end

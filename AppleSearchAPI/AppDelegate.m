@@ -7,9 +7,12 @@
 //
 
 #import "AppDelegate.h"
-
+#import "Reachability.h"
 @interface AppDelegate ()
-
+{
+    Reachability *reachability;
+    
+}
 @end
 
 @implementation AppDelegate
@@ -17,6 +20,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(checkForNetwork) name:kReachabilityChangedNotification object:nil];
+    reachability = [Reachability reachabilityForInternetConnection];
+    [reachability startNotifier];
+    [self checkForNetwork];
     return YES;
 }
 
@@ -44,6 +51,19 @@
     [self saveContext];
 }
 
+- (void)checkForNetwork
+{
+    // check if we've got network connectivity
+    Reachability *myNetwork = [Reachability reachabilityWithHostName:@"www.google.com"];
+    NetworkStatus myStatus = [myNetwork currentReachabilityStatus];
+    
+    if(myStatus == NotReachable) {
+        self.Network = NO;
+    }else{
+        self.Network = YES;
+    }
+    
+}
 #pragma mark - Core Data stack
 
 @synthesize managedObjectContext = _managedObjectContext;
